@@ -43,16 +43,17 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</td>
+                                {{-- <th scope="row">1</td>
                                 <td>Test</td>
                                 <td>Test@gmail.com</td>
-                                <td>Test</td>
+                                <td>Test</td> --}}
+                                <td colspan="4" class="text-center">No data available!</td>
                             </tr>
                         </tbody>
                     </table>
 
                 </div>
-
+            
             </div>
         </div>
         
@@ -95,10 +96,10 @@
                         }, 1000);
                     },
                     error: function(xhr, status, error) {
-                        $('#alertMessages')
-                            .removeClass('d-none alert-success')
-                            .addClass('alert-danger')
-                            .text('Terjadi kesalahan saat menyimpan data. Silakan coba lagi.');
+                        // $('#alertMessages')
+                        //     .removeClass('d-none alert-success')
+                        //     .addClass('alert-danger')
+                        //     .text('Terjadi kesalahan saat menyimpan data. Silakan coba lagi.');
 
                         if (xhr.responseJSON && xhr.responseJSON.errors) {
                             $.each(xhr.responseJSON.errors, function(key, value) {
